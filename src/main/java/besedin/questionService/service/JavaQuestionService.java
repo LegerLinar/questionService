@@ -4,12 +4,14 @@ import besedin.questionService.exceptions.NullQuestionException;
 import besedin.questionService.exceptions.QuestionAlreadyExistException;
 import besedin.questionService.interfaces.QuestionService;
 import besedin.questionService.model.Question;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+@Service
 public class JavaQuestionService implements QuestionService {
     private HashMap<String, Question> questionMap = new HashMap<>(Map.of(
             "Где можно объявить метод?",
