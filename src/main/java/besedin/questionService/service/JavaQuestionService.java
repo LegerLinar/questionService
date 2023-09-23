@@ -53,8 +53,8 @@ public class JavaQuestionService implements QuestionService {
     }
 
     @Override
-    public Question remove(Question question) {
-        Question temp = questionMap.remove(question.getQuestion());
+    public Question remove(String question) {
+        Question temp = questionMap.remove(question);
         if(temp == null){
             throw new NullQuestionException();
         }
